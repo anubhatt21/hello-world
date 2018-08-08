@@ -7,5 +7,5 @@ As part of the client on-boarding offering for cloud services, a number of sub-f
 To facilitate cloud services offering for clients, a few details are required from the client. The data captured on the intake form with those details then triggers the necessary automated steps to get the clients on-boarded. 
 
 * Values needed on the form
-   - Cloud Service:
+  - Cloud Service:
     - Name of the Cloud Service client is being on-boarded for
