@@ -1,8 +1,10 @@
-## Getting Started With Cloud Services
+## PDXC Getting Started with Customer Onboarding Automation
 
-### Introduction
+As part of the client on-boarding offering for cloud services, a number of sub-flows are built to help automate a modular and non-duplicate process for DXC. 
 
-DXC technology has a number of *services* or *offerings* that their clients/companies pay to use. 
-Current DXC process to onboard new clients take approximately 6 weeks. Thus, AHEAD’s role will be to 
-provide solution that aims to “orchestrate” automation activities for requests that arrive from Service 
-Catalog – specifically the Cloud Services Onboarding Catalog Item reducing their manual efforts. 
+### Required Parameters for Intake
+
+To facilitate cloud services offering for clients, a few details are required from the client. The data captured on the intake form with those details then triggers the necessary automated steps to get the clients on-boarded. 
+
+* Values needed on the form 
+
