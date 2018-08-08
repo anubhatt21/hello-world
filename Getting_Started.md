@@ -9,3 +9,5 @@ To facilitate cloud services offering for clients, a few details are required fr
 * Values needed on the form
   - Cloud Service:
     - Name of the Cloud Service client is being on-boarded for
+    - Type : Select Box 
+    - Options: 'AWS' or 'Azure'
