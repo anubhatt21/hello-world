@@ -49,7 +49,7 @@ To facilitate cloud services offering for clients, a few details are required fr
     - Email- Type: Email - Email address of the admins 
     
 ### Main Workflow:
-1. PDXC Onboarding Cloud Services
+PDXC Onboarding Cloud Services
 
 ### Sub-flows Used: 
 1. PDXC Onboarding Domain Creation/ConnectNow Sub-flow
