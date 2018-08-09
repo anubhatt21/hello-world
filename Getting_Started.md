@@ -55,34 +55,40 @@ PDXC Onboarding Cloud Services
 ### Sub-flows Used: 
 1. PDXC Onboarding Domain Creation/ConnectNow Sub-flow
 
-For either of the Cloud Services selected on the intake form, a standard Domain Creation sub-flow runs in order to facilitate DXC’s domain separation criteria. 
+ For either of the Cloud Services selected on the intake form, a standard Domain Creation sub-flow runs in order to facilitate
+ DXC’s domain separation criteria. 
   - Vendor/Manufacturer Validation: Validate that the company being onboarded is not a Vendor or a Manufacturer.
   - MDM Validation: Making sure the Stock Ticker is unique and does not have another client with the same Stock Ticker ID.
   - Manual Task to Validate MDM accounts: A manual task is added to ensure the information for MDM acccounts is accurate.
   - Operations Approval validation: Successful account creation is validated via Operations Approval.
   - Domain, Company and Language Creation/Validation
 
-Failure at any step in the sub-flow is handled by a Catalog Task where steps or actions required to solve those errors are provided.
+ Failure at any step in the sub-flow is handled by a Catalog Task where steps or actions required to solve those errors are
+ provided.
 
 2. PDXC Onboarding Load Client Data Sub-flow
 
-Once the domain, company and language records are created and validated, the next step of the workflow sets up foundational data for that client. 
+ Once the domain, company and language records are created and validated, the next step of the workflow sets up foundational
+ data for that client. 
   - Validate Inputs: This step ensures the data returned from the previous activity is true.
-  - Department and Location data: This step is responsible for inserting new entires in the Department and Location tables for the company. 
+  - Department and Location data: This step is responsible for inserting new entires in the Department and Location tables for
+  the company. 
   - Users and Groups:  New Customer User and Admin records are created.
   - Give Admins Domain Visibility: Admins are added to Domain Visibility Group. 
 
 3. PDXC Onboarding Cloud Business Services Sub-flow
 
-Once the foundation data is loaded and depending on the Cloud Service selected on the Intake Form,the next step is to add services.
-  - Business Services: This activity takes a list of business service names and creates new records in the Business Services table for the onboarding client
+ Once the foundation data is loaded and depending on the Cloud Service selected on the Intake Form,the next step is to add
+ services.
+  - Business Services: This activity takes a list of business service names and creates new records in the Business Services
+  table for the onboarding client
   - Type Relationships: It then creates the Type Relationships.
   - Assignment Rules: Visbility and Assignment rules for those new services are created. 
   - End User Group: The End User Group responsible for these Business Services is also created at this point. 
 
 4. PDXC Onboarding Client Catalog Config Sub-flow
 
-This workflow is then responsible for creation of company styling record in Customer company. 
+ This workflow is then responsible for creation of company styling record in Customer company. 
   - Company Stylings Update: The Company Stylings are updated as per the client company.
   - Record Producers and Catalog items: New records are added, Catalog items are passed, and made Available for Companies.
   
