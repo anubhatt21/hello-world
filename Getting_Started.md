@@ -50,6 +50,8 @@ To facilitate cloud services offering for clients, a few details are required fr
     
 ### Main Workflow:
 PDXC Onboarding Cloud Services
+![screen shot 2018-08-09 at 11 25 17 am](https://user-images.githubusercontent.com/18390433/43912138-09a35786-9bc7-11e8-8fe2-5cdd6a69f19c.png)
+
 
 ### Sub-flows Used: 
 1. PDXC Onboarding Domain Creation/ConnectNow Sub-flow
