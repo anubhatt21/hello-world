@@ -50,8 +50,7 @@ To facilitate cloud services offering for clients, a few details are required fr
     
 ### Main Workflow:
 PDXC Onboarding Cloud Services
-![screen shot 2018-08-09 at 11 25 17 am](https://user-images.githubusercontent.com/18390433/43912138-09a35786-9bc7-11e8-8fe2-5cdd6a69f19c.png)
-
+![screen shot 2018-08-09 at 11 25 17 am](https://user-images.githubusercontent.com/18390433/43913727-74375eea-9bcb-11e8-9b4c-6144a3306d21.png)
 
 ### Sub-flows Used: 
 1. PDXC Onboarding Domain Creation/ConnectNow Sub-flow
@@ -88,6 +87,7 @@ This workflow is then responsible for creation of company styling record in Cust
   - Record Producers and Catalog items: New records are added, Catalog items are passed, and made Available for Companies.
   
 5. a) PDXC Onboarding Cloud Services AWS Configuration Task
+
    b) PDXC Onboarding Cloud Services Azure Configuration Task (Handled by a different team)
   
  ### List of Errors handled using **Catalog Tasks**: Manual Intervention 
