@@ -53,19 +53,25 @@ To facilitate cloud services offering for clients, a few details are required fr
 
 ### Sub-flows Used: 
 1. PDXC Onboarding Domain Creation/ConnectNow Sub-flow
-2. PDXC Onboarding Load Client Data Sub-flow
-3. PDXC Onboarding Cloud Business Services Sub-flow
-4. PDXC Onboarding Client Catalog Config Sub-flow
-5. a) PDXC Onboarding Cloud Services AWS Configuration Sub-flow
-   b) PDXC Onboarding Cloud Services Azure Configuration Sub-flow
-   
-1.1  PDXC Onboarding Cloud Services
+
 For either of the Cloud Services selected on the intake form, a standard Domain Creation sub-flow runs in order to facilitate DXC’s domain separation criteria. In this sub-flow, client’s unique domain and account are created for each client.
 
 The sub-flow is created in compliance with OOSS standards. The first time this sub-flow runs in Dev, it makes a call to DMAR to check whether an account has already been created for that client for error handling. Once the Domain, Client Account, and Language records are created and validated it moves on to run the sub-flow in various environments - dev, sandbox and prod.
 Failure at any step in the sub-flow is handled by a Catalog Task where steps or actions required to solve those errors are provided.
 
-5.a) PDXC Onboarding Cloud Services AWS Configuration Sub-flow
+2. PDXC Onboarding Load Client Data Sub-flow
+
+Once the domain, company and language records are created and validated, the next step of the workflow sets up foundational data for that client. This sub flow is responsible for inserting new entires in the Department and Location tables for the company. New Customer User and Admin records are also created and added to Domain Visibility group. 
+
+3. PDXC Onboarding Cloud Business Services Sub-flow
+
+Once the foundation data is loaded, depending on the selection of Cloud Service(AWS or Azure) on the form, this workflow takes a list of business service names and creates new records in the Business Services table and then creates the Type Relationships and Assignment Rules for those new services. The End User Group responsible for the Business Services is also created at this point. 
+
+4. PDXC Onboarding Client Catalog Config Sub-flow
+
+This workflow is then responsible for creation of company styling record in Customer company. Add new records to the Available for Companies table and Catalog items are passed. Along with that Record Producer items are made available for the company. 
+
+5. a) PDXC Onboarding Cloud Services AWS Configuration Sub-flow
 
 After completing the first 4 sub-flows and depending on the Cloud Service selected on the intake form, if the client is being on-boarded for an AWS service, the sub-flow for AWS configuration will run. In this sub-flow, the three major steps are,
  
@@ -83,7 +89,9 @@ After completing the first 4 sub-flows and depending on the Cloud Service select
    - Once the AWS configuration sub-flow is complete, the instance is ready for client hand-off. 
    
  * Onboarding and OD&T teams are involved in managing the manual tasks needed for validating errors that come from the workflows and then get directed to the concerned assignment groups and necessary action could be taken. 
- 
+
+   b) PDXC Onboarding Cloud Services Azure Configuration Sub-flow (Handled by a different team)
+  
  ### List of Errors handled using **Catalog Tasks**: Manual Intervention 
  
 Catalog tasks have been added at every failure step to ensure intervention and investigation from associated assignment groups. 
