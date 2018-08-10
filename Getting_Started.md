@@ -110,6 +110,7 @@ Catalog tasks have been added at every failure step to ensure intervention and i
 #### Note : 
 The workflow then can be leveraged for other onboarding offerings. 
 
+#### Link: <https://github.dxc.com/Platform-DXC/offering-client-onboarding/blob/master/docs/OnboardingWorkflowModules.md>
 
 
 
